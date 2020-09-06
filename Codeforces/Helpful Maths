@@ -1,0 +1,43 @@
+#include<iostream>
+#include<algorithm>
+ 
+			using namespace std;
+			
+			
+			int main(){
+			
+			string s;
+			
+			cin>>s;
+			
+			  int c=0;
+			
+			
+			for(int i=0;s[i]!='\0';i++)
+			{
+				if(s[i]!='+')
+				  c++;	
+			}
+			
+			int ar[c+1];
+			c=0;	
+			
+			for(int i=0;s[i]!='\0';i++){
+				if(s[i]!='+')
+				{
+			  	ar[c++]=s[i];	
+				}
+			}	
+						
+			sort(ar,ar+c);
+			
+			for(int i=0;i<=c-1;i++)
+			{
+				if(i==c-1)
+					cout<<ar[i]-48<<endl;
+				else				
+				cout<<ar[i]-48<<"+";
+			}
+			
+			}
+			
