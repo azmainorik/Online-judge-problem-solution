@@ -1,0 +1,34 @@
+#include<iostream>
+ 
+		using namespace std;
+		
+		int main(){
+		
+		string c; char m;int c1=0;
+		
+		cin>>c;
+		
+		
+		for(int i=0;c[i]!='\0';i++){
+			
+			m=c[i];
+			c1++;	
+			for(int  j=i+1;c[j]!='\0';j++){
+				
+				if(c[j]==m){
+					c1--;
+					break;
+				}
+			
+			}
+			
+			
+		} 
+		
+		
+		if(c1%2==0)
+		cout<<"CHAT WITH HER!"<<endl;
+		else
+			cout<< "IGNORE HIM!"<<endl;
+			
+		}
