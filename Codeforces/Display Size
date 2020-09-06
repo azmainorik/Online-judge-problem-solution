@@ -1,0 +1,28 @@
+#include<iostream>
+#include<math.h>
+#include<algorithm>
+ 
+using namespace std;
+			
+int main(){
+
+int n;
+cin>>n;
+			
+long long int r,ar2[100000],c1=0;
+
+r=sqrt(n+1); int rslt;
+				
+for(long long int i=1;i<=r;i++){
+				if(n%i==0){	
+				ar2[c1]=i;
+				c1++;
+				}
+			} 
+			
+sort(ar2,ar2+c1);
+rslt=n/ar2[c1-1];
+cout<<ar2[c1-1]<<" "<<rslt<<endl;
+}
+			
+			
