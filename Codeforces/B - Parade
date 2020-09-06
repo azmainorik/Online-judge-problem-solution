@@ -1,0 +1,70 @@
+#include<iostream>
+ 
+ 
+ 
+       using namespace std;
+ 
+       int main(){
+       
+       long long int i;
+ 
+       int result=0,result2=0;
+       int sum3=0,sum4=0;
+       int m;
+ 
+       int a=0; 
+       cin>>i;
+       int r[i+1],l[i+1];
+       for(int n=0;n<i;n++){
+          cin>>l[n]>>r[n]; 
+        }
+ 
+        int sum1=0,sum2=0;
+ 
+ 
+        for(int j=0;j<i;j++){
+ 
+            sum1=sum1+l[j];
+            sum2=sum2+r[j];
+ 
+        }
+ 
+       int mx=sum1-sum2;
+       if(mx<0)
+       mx=mx*-1;
+       for(int k=0;k<i;k++){
+       m=k;
+       int r1=l[k]-r[k];
+       cout<<"sum= "<<sum1<<endl<<sum2<<endl;;
+       if(r1<0)
+       r1=r1*-1;
+       cout<<r1<<endl;
+       if(r1>mx){
+       if(l[k]>r[k]){
+       sum3=sum1-r1;
+       sum4=sum2+r1;
+       cout<<result<<endl;
+       result2=sum3-sum4;
+       }
+       else{
+       sum3=sum1+r1;
+       sum4=sum2-r1;
+       result2=sum3-sum4;
+}
+       if(result2<0)
+       result2=result2*-1;
+ 
+       if(result2>mx){
+       result=m;
+       mx=result2;
+       a++;
+      }
+   }
+       if(a==0){
+       result=0;
+       }
+       else{
+       result=result+1;
+       }
+       cout<<result<<endl;
+         }
