@@ -1,0 +1,26 @@
+    #include<iostream>
+     
+     
+    			using namespace std;
+    			
+    			int main(){
+    			
+    			int r,i=0,n,k;
+    			
+    			cin>>n>>k;
+    			
+    			int sum=0,sum1=0,c=1;
+    		   			
+    			while(c<=n){
+    				
+    			sum=c*5; c++;    			
+    			sum1=sum1+sum;    						
+    			r=(240-sum1);	    			
+    			if(r>=k)
+    				i++;
+    			else
+    				break;
+    				}
+    			cout<<i<<endl;
+    			
+    		}
