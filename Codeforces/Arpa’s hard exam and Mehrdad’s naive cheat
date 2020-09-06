@@ -1,0 +1,43 @@
+#include<iostream>
+ 
+ using namespace std;
+ 
+            int main(){
+            int n;
+            cin>>n;
+            int sum;
+            if(n==0)
+            cout<<1<<endl;
+            else{
+ 
+                        int r;int c1=0,c2=0;
+ 
+                        if(n%2!=0)
+                    {
+ 
+                for(long long int i=r;i<=n;i=i+2){
+ 
+                            c1++;
+                            if(c1%2!=0)
+                                sum=8;
+                            else
+                                sum=2;
+}
+ 
+                    cout<<sum<<endl;
+ 
+                    }
+                    else{
+ 
+                for(long long int i=r;i<=n;i=i+2){
+ 
+                            c2++;
+                            if(c2%2!=0)
+                                sum=6;
+                            else
+                                sum=4;
+}
+ 
+                    cout<<sum<<endl;
+ 
+                    }
