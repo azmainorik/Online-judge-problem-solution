@@ -1,0 +1,47 @@
+#include<iostream>
+ 
+ 
+            using namespace std;
+ 
+ 
+            int main(){
+ 
+            string c;int m=1,h=0,p=0,k=0,q=0;
+ 
+            int arr[100];
+            cin>>c;
+            for(int i=0;c[i]!='\0';i++){
+           if(c[i]!='A'&&c[i]!='E'&&c[i]!='I'&&c[i]!='O'&&c[i]!='U'&&c[i]!='Y')
+           {
+             m++;
+           }
+           else{
+           arr[p]=m;
+           //cout<<arr[p]<<endl;
+           p++;
+           m=1;
+            }
+          }
+ 
+               // h++;
+ 
+            arr[p]=m;
+            p++;
+ 
+ 
+ 
+                int mx=0;
+ 
+                for(int j=0;j<p;j++){
+ 
+                    if(arr[j]>mx)
+                      mx=arr[j];
+ 
+                }
+ 
+            cout<<mx<<endl;
+ 
+ 
+ 
+}
+ 
