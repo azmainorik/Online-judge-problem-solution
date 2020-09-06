@@ -1,0 +1,45 @@
+#include<iostream>
+ 
+		using namespace std;
+		
+		int main(){
+		
+		int n,m,k;
+		cin>>n>>m>>k;
+		
+		
+		int mx;
+		mx=2*m;
+		
+		int r,d; char s;
+		if(k%mx==0){
+			r=k/mx;
+			}else{
+		r=(k/mx)+1;
+		
+		}
+		
+		int l;
+		
+		l=((r-1)*m)*2;
+		
+		
+		int df;
+		df=k-l;
+		
+		if(df%2==0){
+			d=df/2;
+			}
+		else{
+		d=(df/2)+1;
+		}
+		
+		
+		if(k%2==0)			
+			s='R';
+		else
+			s='L';
+		
+		cout<<r<<" "<<d<<" "<<s<<endl;		
+			
+		}
