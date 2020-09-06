@@ -1,0 +1,101 @@
+#include<iostream>
+ 
+			
+			
+			using  namespace std;
+			
+		
+			int main(){
+			
+			string s;
+			
+			cin>>s;
+			
+			int ch=1,br=1;
+			
+			if(s[1]=='\0'){
+				
+				if(s[0]>96){
+						
+				s[0]=s[0]-32;
+				cout<<s[0]<<endl;
+					}
+			else
+			{
+				s[0]=s[0]+32;
+				cout<<s[0]<<endl;
+			}
+				}
+			else{
+			for(int i=0;s[i]!='\0';i++){
+		  		if(s[0]>96){
+						if(i>0){
+					if(s[i]>90)
+					{
+							ch=-1;
+							break;
+					}
+					else
+						ch=0;
+					}
+				}
+						else{
+							ch=-1;
+							break;
+				}
+			}
+			
+      if(ch==-1)
+			{
+				for(int i=0;s[i]!='\0';i++)
+				{
+					if(s[i]>90){
+			  		br=-1;
+						break;
+				 }else
+					br=0;
+				}
+						
+			}
+			
+					if(ch==0)
+						
+					{
+						s[0]=s[0]-32;
+						cout<<s[0];
+						
+						for(int i=1;s[i]!='\0';i++)
+						{		
+							s[i]=s[i]+32;
+							cout<<s[i];
+						}						
+						}
+				
+				
+					if(br==0)
+					{
+						
+						for(int i=0;s[i]!='\0';i++)
+						{
+							
+							s[i]=s[i]+32;
+							cout<<s[i];
+							
+							}
+						}
+						
+	
+		if(br==-1&&ch==-1){
+			
+			for(int i=0;s[i]!='\0';i++)
+			{
+				cout<<s[i];
+				
+				
+			}
+			}
+	
+	cout<<endl;
+	
+			}
+					}
