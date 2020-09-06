@@ -1,0 +1,36 @@
+    #include<iostream>
+    
+ 		using namespace std;
+    			
+    			
+  	int main(){
+    			
+  	int  a,b,c;
+    			
+    cin>>a>>b>>c;
+    			
+   if(a<1||b<2||c<4)
+   	cout<<0<<endl;
+   else{
+   	if(a==1&&b==2&&c==4)
+   	cout<<7<<endl;
+    else{
+    int r=0,r1=1,r2=1;
+		while(r*1<=a&&r*2<=b&&r*4<=c)
+		{
+    	r++;
+ 		}
+    r=r-1;
+    				
+   	r1=r*2;
+   	r2=r*4;
+     
+    int sum;
+    			
+    sum=r+r1+r2;;
+    			
+   	cout<<sum<<endl;
+    						
+    	}
+  	}	
+ }
