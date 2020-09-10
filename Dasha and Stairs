@@ -1,0 +1,25 @@
+    #include<iostream>
+    #include<algorithm>
+    #include<math.h>
+     
+ 		using namespace std;
+    		
+ 		int main(){
+     
+ 		long long int a,b;
+ 		cin>>a>>b;
+    			
+ 		int m; m=a-b;
+  	if(a==0&&b==0)
+  	cout<<"NO"<<endl;
+  	else{
+  
+  	if(m<0)
+  	m=m*-1;
+  	if(m>1)
+  	cout<<"NO"<<endl;
+  	else
+  	cout<<"YES"<<endl;
+  			
+ 	}
+}
