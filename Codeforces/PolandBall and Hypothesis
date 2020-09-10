@@ -1,0 +1,49 @@
+#include<iostream>
+#include<math.h>
+ 
+ 
+		using namespace std;
+		
+		int main(){
+		
+		long long int n,m=1,a=0,b=0;
+		
+		cin>>n;
+		
+		if(n==1)
+			cout<<3<<endl;
+		else		
+		if(n%2!=0){
+			
+			cout<<1<<endl;
+		}		
+			else{
+				
+				for(long long int i=1;;i++){
+					
+					b=n*i+1;
+					
+				m=sqrt(b+1);
+				
+					for(long long int j=3;j<=m;j++){
+						
+							if(b%j==0){
+								a=-1;
+								break;
+						}				
+					}
+					
+				if(a==-1){
+					cout<<i<<endl;	
+					break;
+				
+				}
+				}
+				
+			}
+			
+			
+			
+		
+		
+		}
