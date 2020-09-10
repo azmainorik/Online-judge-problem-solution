@@ -1,0 +1,115 @@
+#include<iostream>
+ 
+ 
+ 
+using namespace std;
+			
+int main(){
+			
+string s;
+cin>>s;
+ 		
+int	q=0,r=0,b=0,y=0,g=0,p=0;
+
+for(int h=0;s[h]!='\0';h++)
+			p++;
+
+
+for(int i=0;s[i]!='\0';i++)
+{
+  	q=i;
+			
+	if(s[i]=='R')
+  {
+		if(q>3){					
+	for(int k=q-4;k>=0;k=k-4)
+  {
+			if(s[k]!='R')
+					r++;
+	}
+}
+
+for(int k1=q+4;k1<p;k1=k1+4)
+{
+		if(s[k1]!='R')
+				r++;
+}
+	 break;
+}
+}
+												
+ q=0;
+		
+		
+for(int i=0;s[i]!='\0';i++)
+{
+   	q=i;
+			
+	if(s[i]=='B')
+	{
+		if(q>3){					
+		for(int k=q-4;k>=0;k=k-4)
+    {
+				if(s[k]!='B')
+						b++;
+  	}
+}
+	for(int k1=q+4;k1<p;k1=k1+4){
+			if(s[k1]!='B')
+					b++;
+	}
+			 break;
+	}
+}
+q=0;
+
+for(int i=0;s[i]!='\0';i++)
+{
+		q=i;
+			
+	if(s[i]=='Y')
+	{
+		if(q>3){					
+		for(int k=q-4;k>=0;k=k-4){
+				if(s[k]!='Y')
+						y++;
+	}
+}
+	for(int k1=q+4;k1<p;k1=k1+4)
+  {
+			if(s[k1]!='Y')
+				y++;
+  }
+					
+		 break;
+	}
+}
+
+	q=0;
+		
+		
+for(int i=0;s[i]!='\0';i++)
+{
+		q=i;
+			
+	if(s[i]=='G')
+	{
+		if(q>3){					
+		for(int k=q-4;k>=0;k=k-4){
+				if(s[k]!='G')
+						g++;
+			}
+	}
+
+for(int k1=q+4;k1<p;k1=k1+4)
+{
+		if(s[k1]!='G')
+				g++;
+}
+					
+		 break;
+  }
+}
+		
+	cout<<r<<" "<<b<<" "<<y<<" "<<g<<" "<<endl;
+}
