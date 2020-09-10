@@ -1,0 +1,36 @@
+#include<iostream>
+#include<algorithm>
+#include<math.h>
+ 
+using namespace std;
+
+int main(){
+int k;
+cin>>k;
+ 
+int arr[13];
+ 
+for(int i=0;i<12;i++)
+		cin>>arr[i];
+if(k==0)
+cout<<0<<endl;
+else{
+
+sort(arr,arr+12);
+ 
+int sum=0,i=0;
+
+for(int p=11;p>=0;p--){
+	sum=sum+arr[p];
+     i++;
+	if(sum>=k)
+  {
+  	cout<<i<<endl;
+		break;
+	}
+}
+ 
+	if(sum<k)
+	cout<<-1<<endl;
+ }
+}
