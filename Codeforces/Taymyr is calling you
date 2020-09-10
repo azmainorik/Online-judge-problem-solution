@@ -1,0 +1,22 @@
+#include<iostream>
+#include<algorithm>
+#include<math.h>
+ 
+using namespace std;
+
+int main(){
+
+long long int n,m,z,a=0;
+			
+cin>>n>>m>>z;
+			
+for(int i=1;;i++)
+{
+  	if(i>z)
+		break;
+ if((n*i)<=z&&(n*i)%m==0)
+	  a++;
+}
+	cout<<a<<endl;
+}				
+				
