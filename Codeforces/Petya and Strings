@@ -1,0 +1,36 @@
+    #include<iostream>
+    #include<math.h>
+    #include<algorithm>
+    #include<vector>
+    #define pb(x) push_back(x) 
+     
+     
+     
+    using namespace std;
+    			
+    int main(){
+    				
+    string s,p;
+    				
+    				
+  	cin>>s>>p;
+    			
+  	int a=0;
+   
+    for(int i=0;s[i]!='\0';i++){
+    						
+      if(s[i]!=p[i]){
+     
+      if(p[i]>96)
+    	p[i]=p[i]-32;
+     
+     	if(s[i]>96)
+    	s[i]=s[i]-32;
+    }
+ }
+    					
+    					
+ 	if(s==p)cout<<0<<endl;
+ 	if(s<p)cout<<-1<<endl;
+ 	if(s>p)cout<<1<<endl;
+ }
