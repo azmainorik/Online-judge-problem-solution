@@ -1,0 +1,49 @@
+    #include<iostream>
+    #include<string.h>
+    #include<math.h>
+    #include<algorithm>
+    #include<vector>
+    #define pb(x) push_back(x) 
+     
+     
+     
+    using namespace std;
+    			
+    int main(){
+    
+    int n,k;
+    			
+    cin>>n>>k;
+    			
+    long long int    a;
+    			
+    int  c=0,s=0,p=0;
+    			
+    for(int i=0;i<n;i++){			
+    				
+    	cin>>a;
+    			
+    if(a>k&&a<=k*2)c++;
+    									
+      if(a>k*2)
+	  {
+    											
+        c=c+a/(k*2);
+    					
+        if(a%(k*2)!=0)
+	  {	
+        if(a%(k*2)>k)c++;
+        else
+        s++;	
+      }
+      }	
+    	if(a<=k)s++;
+    		
+    }	
+    								
+    if(s%2==0)s=s/2;
+    else
+    s=((s-1)/2)+1;
+    								
+    cout<<c+s<<endl;
+  }
