@@ -1,0 +1,68 @@
+    #include<iostream>
+    #include<vector>
+    #include<stack>
+    #include<algorithm>
+    #include<math.h>
+    #include<queue>
+    #define pb(x) push_back(x)
+    #define p(x)  push(x)
+     
+    using namespace std;
+     
+     
+    int main(){
+     
+    vector<string>a; vector<string>b;
+     
+    long long int n;string x;
+     
+    cin>>x;
+  
+    a.pb(x);
+                    
+     cin>>x;
+                    
+     b.pb(x);
+    
+     cin>>n;
+                    
+    for(int i=1;i<=n;i++)
+    {
+   				cin>>x;
+   				a.pb(x);
+    
+          cin>>x;
+    						
+    			b.pb(x);
+    				
+    }
+     
+  cout<<a[0]<<" "<<b[0]<<endl;
+    					//cout<<a[0]<<" ";
+    					
+    					
+   for(int i=1;i<=n;i++)
+   {
+   		if(i==1){
+   		if(a[i]==a[0]){
+    	a[i]=b[i]; b[i]=b[i-1];
+   	}
+  	else
+    a[i]=a[i-1];
+    						
+    						
+    cout<<a[i]<<" "<<b[i]<<endl;
+   }
+   	else
+   {
+    	if(b[i-1]==a[i])
+   	   a[i]=a[i-1];
+    	  else{
+    		a[i]=b[i];
+    		b[i]=b[i-1];
+   }
+  cout<<a[i]<<" "<<b[i]<<endl;
+ }
+    						
+}
+}
