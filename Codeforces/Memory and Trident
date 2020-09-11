@@ -1,0 +1,59 @@
+    #include<iostream>
+    #include<math.h>
+    #include<algorithm>
+    #include<vector>
+    #define pb(x) push_back(x) 
+   
+     
+  	using namespace std;
+    			
+    int main(){
+    				
+    				
+    string s;
+    				
+    cin>>s;
+    				
+    int c=0,l=0,d=0,u=0,r=0;
+    			
+    for(int i=0;s[i]!='\0';i++)
+    {
+    				c++;
+      if(s[i]=='L')l++;
+    	if(s[i]=='U')u++;
+    	if(s[i]=='D')d++;
+    	if(s[i]=='R')r++;	
+   	}
+    			
+    if(c%2!=0){ cout<<-1<<endl;  return 0;};
+    			
+    int k=c; int m=0,n=0;
+    		
+   	if((l+r)%2!=0&&(u+d)%2!=0){
+    				
+   	m=((l+r+1)/2)-min(l,r);
+   	n=((u+d-1)/2)-min(u,d);
+   
+   	cout<<m+n<<endl;
+    				
+   	return 0;
+    				
+    				
+   }			
+    			
+    			
+  if((l+r)%2==0){
+    				
+  m=fabs((l+r)/2-l);
+    				
+  }
+    			
+    			
+  if((u+d)%2==0)
+  { 						
+    n=fabs((u+d)/2-u);
+  }
+    					
+    			
+  cout<<m+n<<endl;
+  }
