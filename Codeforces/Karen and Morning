@@ -1,0 +1,45 @@
+    #include<iostream>
+    #include<string>
+    #include<cstdio>
+    #include<vector>
+    #include<stack>
+    #include<algorithm>
+    #include<math.h>
+    #include<queue>
+    #define pb(x) push_back(x)
+    #define p(x) push(x)
+     
+     
+    using namespace std;
+     
+     
+    int main()
+    {
+     
+      int h,m;char x;
+     
+      cin>>h>>x>>m;
+     
+      if(h==23&&m>32)
+      {
+         cout<<60-m<<endl;
+         return 0;
+       }
+     
+     
+     
+   for(int i=0;;i++)
+   {
+      if((h/10==m%10&&h%10==m/10))
+      {
+         cout<<i<<endl;
+         return 0;
+      }
+        m++;
+    if(m>=60)
+    {
+       m=m-60;
+       h=h+1;
+     }
+    }
+  }
