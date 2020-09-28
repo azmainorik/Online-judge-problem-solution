@@ -1,0 +1,25 @@
+    #include<iostream>
+    #include<cstdio>
+    #include<vector>
+    #include<queue>
+    #include<algorithm>
+     
+    using namespace std;
+     
+     
+    long long int fact(long long int x)
+    {
+      long long int s=1;
+     
+      for(int i=x;i>=1;i--)
+            s=s*i;
+           return s;
+    }
+     
+    int main()
+    {
+       long long int a,b,p;
+       cin>>a>>b;
+       p=min(a,b);
+       cout<<fact(p)<<endl;
+    }
