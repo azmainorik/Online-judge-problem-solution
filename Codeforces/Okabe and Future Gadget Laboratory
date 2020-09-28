@@ -1,0 +1,78 @@
+    #include<iostream>
+     
+     
+            using namespace std;
+     
+     
+            int main()
+            {
+                long long int n,sum=0,a=0;
+     
+                cin>>n;
+     
+     
+                long long int arr[n+2][n+2];
+     
+                for(int i=1;i<=n;i++)
+                    for(int j=1;j<=n;j++)
+                      cin>>arr[i][j];
+     
+                if(n==1)
+                    if(arr[1][1]!=1)
+                {
+                    cout<<"NO"<<endl;
+                    return 0;
+                }else
+                {
+                    cout<<"YES"<<endl;
+                    return 0;
+                }
+     
+     
+     
+                int p,q;
+     
+                for(int i=1;i<=n;i++)
+                    for(int j=1;j<=n;j++)
+                {
+                          p=arr[i][j];
+     
+                          if(p!=1)
+                    for(int x=1;x<=n;x++)
+                    {
+                      q=arr[x][j];
+                        for(int y=1;y<=n;y++)
+                     {
+                         if(x!=i)
+                          {
+                              if(y!=j)
+                              {
+                               sum=q+arr[i][y];
+                               if(sum==p)
+                               {
+                               sum=0;
+                               a=-1;
+                               break;
+                               }
+                               else
+                                 a=1;
+                              }
+                        }
+                     }
+                        if(a==-1)
+                          {
+                            a=0;
+                            break;
+                          }
+     
+                    }
+                       if(a==1)
+                        {
+                          cout<<"NO"<<endl;
+                              return 0;
+                        }
+                }
+                      if(a!=1)cout<<"YES"<<endl;
+     
+            }
+     
